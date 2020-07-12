@@ -28,10 +28,6 @@ export class DomListener {
             )
         })
     }
-
-    test() {
-        console.log('test');
-    }
 }
 
 function getMethodName(listener) {

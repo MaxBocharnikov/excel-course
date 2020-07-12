@@ -15,6 +15,7 @@
   }
 
   .row-info {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +24,7 @@
     border: 1px solid $border-color;
     background: #f8f9fa;
     border-top: none;
+    user-select: none;
   }
 
   .row-data {
@@ -30,6 +32,7 @@
   }
 
   .column {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,9 +45,10 @@
     border-left: none;
     color: #111;
     white-space: nowrap;
+    user-select: none;
   }
 
-  .cell {
+  .ceil {
     min-width: 40px;
     padding: 5px;
     width: $cell-width;
@@ -55,9 +59,40 @@
     outline: none;
     &.selected {
       border: none;
-      outline: 2px solid #3c74ff;
+      outline: 2px solid $primary-color;
       z-index: 2;
     }
   }
+
+  .col-resize, .row-resize {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: $primary-color;
+    opacity: 0;
+    z-index: 1000;
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  .col-resize {
+    top: 0;
+    width: 4px;
+
+    &:hover {
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize {
+    left: 0;
+    height: 4px;
+
+    &:hover {
+      cursor: row-resize;
+    }
+  }
+
 
 }
