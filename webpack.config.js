@@ -13,7 +13,7 @@ const jsLoaders = () => {
      loader: 'babel-loader'
   }];
 
-    if(isDev) {
+    if (isDev) {
         loaders.push('eslint-loader');
     }
     return loaders;
