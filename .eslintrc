@@ -12,7 +12,7 @@
     "comma-dangle": "off",
     "indent": "off",
     "require-jsdoc": "off",
-    "no-console": "warn",
+    "no-console": "off",
     "operator-linebreak": "off",
     "no-debugger": "warn",
     "spaced-comment":"off",
