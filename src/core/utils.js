@@ -51,3 +51,21 @@ export function debounce(fn, wait) {
   }
 }
 
+export function clone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+
+export function getFormatedNow() {
+    const now = new Date();
+    const date = now.getDate();
+    const month = now.getMonth();
+    const year = now.getFullYear();
+    const hrs = now.getHours();
+    const mins = now.getMinutes();
+    const sec = now.getSeconds();
+    return `${date}.${month}.${year} ${hrs}:${mins}:${sec}`;
+}
+
+export function preventDefault(event) {
+    event.preventDefault();
+}

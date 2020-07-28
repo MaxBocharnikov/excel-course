@@ -3,7 +3,8 @@ import {
     CHANGE_STYLES,
     CHANGE_TITLE,
     CHANGE_TEXT,
-    TABLE_RESIZE
+    TABLE_RESIZE,
+    UPDATE_DATE
 } from './types';
 
 export const tableResize = data => {
@@ -39,6 +40,12 @@ export const changeTitle = data => {
     return {
         type: CHANGE_TITLE,
         data
+    }
+};
+
+export const updateDate = () => {
+    return {
+        type: UPDATE_DATE,
     }
 };
 
