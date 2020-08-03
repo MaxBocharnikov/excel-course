@@ -4,13 +4,22 @@
   "description": "Pure JS tutorial course",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
+    "test: watch": "jest --watch",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "lint": "npx eslint ./src"
   },
   "babel": {
     "presets": [
-      "@babel/preset-env"
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties"
@@ -40,6 +49,7 @@
     "eslint-config-google": "^0.14.0",
     "eslint-loader": "^4.0.2",
     "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.2.2",
     "mini-css-extract-plugin": "^0.9.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
@@ -50,6 +60,7 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/polyfill": "^7.8.7",
+    "eslint-plugin-jest": "^23.20.0",
     "normalize.css": "^8.0.1"
   }
 }
